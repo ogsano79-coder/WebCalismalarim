@@ -1,0 +1,22 @@
+.reklamAlani {
+    text-align: center;
+}
+
+/* varsayılan (telefon ekranları) */
+#kucukReklam {
+    display: inline;
+}
+
+#buyukReklam {
+    display: none;
+}
+
+/* geniş ekran (tablet + bilgisayar) */
+@media screen and (min-width: 750px) {
+    #kucukReklam {
+        display: none;
+    }
+    #buyukReklam {
+        display: inline;
+    }
+}
