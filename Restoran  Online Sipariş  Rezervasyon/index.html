@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Restoran Online Sipariş / Rezervasyon</title>
+</head>
+<body>
+
+<h2>🍽️ Online Sipariş / Rezervasyon Formu</h2>
+
+<form>
+
+    <!-- Yemek Seçimi -->
+    <label>Yemek Seçiniz:</label><br>
+    <select>
+        <optgroup label="Ana Yemekler">
+            <option>Kebap</option>
+            <option>Pizza</option>
+            <option>Hamburger</option>
+        </optgroup>
+
+        <optgroup label="Tatlılar">
+            <option>Baklava</option>
+            <option>Sütlaç</option>
+            <option>Kazandibi</option>
+        </optgroup>
+
+        <optgroup label="İçecekler">
+            <option>Ayran</option>
+            <option>Kola</option>
+            <option>Çay</option>
+        </optgroup>
+    </select>
+
+    <br><br>
+
+    <!-- Ekstra Seçenekler -->
+    <label>Ekstra İstekler:</label><br>
+    <input type="checkbox"> Acılı<br>
+    <input type="checkbox"> Extra Peynir<br>
+    <input type="checkbox"> Soğansız<br>
+
+    <br>
+
+    <!-- Rezervasyon Saati -->
+    <label>Rezervasyon Saati:</label><br>
+    <input type="time">
+
+    <br><br>
+
+    <!-- Özel İstekler -->
+    <label>Özel İstekleriniz:</label><br>
+    <textarea rows="4" cols="30" placeholder="Özel notlarınızı yazınız..."></textarea>
+
+    <br><br>
+
+    <!-- Gönder Butonu -->
+    <button type="submit">Siparişi Gönder</button>
+
+</form>
+
+</body>
+</html>
