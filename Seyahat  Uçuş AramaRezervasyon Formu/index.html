@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Uçuş Arama / Rezervasyon</title>
+</head>
+<body>
+
+<h2>✈️ Uçuş Arama / Rezervasyon Formu</h2>
+
+<form>
+
+    <!-- Uçuş Türü -->
+    <label>Uçuş Türü:</label><br>
+    <input type="radio" name="ucus"> Tek Yön
+    <input type="radio" name="ucus"> Gidiş - Dönüş
+
+    <br><br>
+
+    <!-- Kalkış Noktası -->
+    <label>Kalkış Havalimanı:</label><br>
+    <select>
+        <option>İstanbul</option>
+        <option>Ankara</option>
+        <option>İzmir</option>
+        <option>Antalya</option>
+    </select>
+
+    <br><br>
+
+    <!-- Varış Noktası -->
+    <label>Varış Havalimanı:</label><br>
+    <select>
+        <option>Berlin</option>
+        <option>Londra</option>
+        <option>Paris</option>
+        <option>Roma</option>
+    </select>
+
+    <br><br>
+
+    <!-- Gidiş Tarihi -->
+    <label>Gidiş Tarihi:</label><br>
+    <input type="date">
+
+    <br><br>
+
+    <!-- Dönüş Tarihi -->
+    <label>Dönüş Tarihi:</label><br>
+    <input type="date">
+
+    <br><br>
+
+    <!-- Yolcu Sayısı -->
+    <label>Yolcu Sayısı:</label><br>
+    <select>
+        <option>1 Yolcu</option>
+        <option>2 Yolcu</option>
+        <option>3 Yolcu</option>
+        <option>4 Yolcu</option>
+    </select>
+
+    <br><br>
+
+    <!-- Arama Butonu -->
+    <button type="submit">Uçuş Ara</button>
+
+</form>
+
+</body>
+</html>
