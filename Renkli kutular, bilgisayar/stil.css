@@ -1,0 +1,37 @@
+div{
+    height: 100px;
+    color: white;
+    font-size: 20px;
+    font-family: Arial, sans-serif;
+    line-height: 100px;
+    padding-left: 10px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    width: 20%;
+}
+
+/* Kutu 1 */
+.gecisli1{
+    background: linear-gradient(to right, skyblue, #23538A);
+}
+
+/* Kutu 2 */
+.gecisli2{
+    background: linear-gradient(to left, red, black);
+    width: 30%;
+}
+
+/* Kutu 3 */
+.gecisli3{
+    background: linear-gradient(to right top, #0cbaba, #380036, darksalmon);
+    width: 40%;
+}
+
+/* Hover animasyonu */
+div:hover{
+    width: 1000px;
+    cursor: hand;
+    transition-property: width;
+    transition-duration: 0.5s;
+    transition-delay: 0.1s;
+}
