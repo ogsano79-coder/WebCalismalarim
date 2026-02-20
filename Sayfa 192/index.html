@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<title>While ve Do-While Örneği</title>
+</head>
+<body>
+
+<h3>While Döngüsü (0'dan 10'a)</h3>
+<div id="ileri"></div>
+
+<h3>Do-While Döngüsü (10'dan 0'a)</h3>
+<div id="geri"></div>
+
+<script>
+
+// WHILE → 0'dan 10'a
+let i = 0;
+let ileriSonuc = "";
+
+while (i <= 10) {
+    ileriSonuc += i + "<br>";
+    i++;
+}
+
+document.getElementById("ileri").innerHTML = ileriSonuc;
+
+
+// DO-WHILE → 10'dan 0'a
+let j = 10;
+let geriSonuc = "";
+
+do {
+    geriSonuc += j + "<br>";
+    j--;
+} while (j >= 0);
+
+document.getElementById("geri").innerHTML = geriSonuc;
+
+</script>
+
+</body>
+</html>
