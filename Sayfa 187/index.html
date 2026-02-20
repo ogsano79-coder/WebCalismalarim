@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<title>Dijital Sözlük</title>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        margin-top: 50px;
+    }
+
+    .kutu {
+        width: 350px;
+        margin: auto;
+        padding: 20px;
+        background-color: #b3e5fc; /* AÇIK MAVİ */
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
+
+    input[type="text"] {
+        padding: 5px;
+        width: 150px;
+    }
+
+    input[type="button"] {
+        padding: 5px 10px;
+        cursor: pointer;
+    }
+
+    h3 {
+        margin-top: 20px;
+    }
+</style>
+
+</head>
+<body>
+
+<div class="kutu">
+
+    <input type="text" id="ingKelime" placeholder="İngilizce Kelime">
+    <input type="button" value="Çevir" onclick="cevir()">
+
+    <h3>Kelimenin Türkçe Karşılığı</h3>
+    <h2 id="sonuc"></h2>
+
+</div>
+
+<script>
+
+function cevir() {
+
+    let kelime = document.getElementById("ingKelime").value.toLowerCase();
+
+    let sozluk = {
+        "computer": "bilgisayar",
+        "book": "kitap",
+        "table": "masa",
+        "phone": "telefon",
+        "school": "okul",
+        "teacher": "öğretmen",
+        "student": "öğrenci"
+    };
+
+    if (sozluk[kelime]) {
+        document.getElementById("sonuc").innerHTML = sozluk[kelime];
+    } else {
+        document.getElementById("sonuc").innerHTML = "Kelime bulunamadı";
+    }
+}
+
+</script>
+
+</body>
+</html>
