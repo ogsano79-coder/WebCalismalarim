@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<title>Satranç Tahtası</title>
+
+<style>
+    #tahta {
+        width: 320px;
+        height: 320px;
+        border: 2px solid black;
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+        grid-template-rows: repeat(8, 1fr);
+        margin-top: 10px;
+    }
+
+    .kare {
+        width: 40px;
+        height: 40px;
+    }
+
+    .siyah {
+        background-color: black;
+    }
+
+    .beyaz {
+        background-color: white;
+    }
+</style>
+</head>
+<body>
+
+<button onclick="tahtaOlustur()">Tahtayı Oluştur</button>
+
+<div id="tahta"></div>
+
+<script>
+function tahtaOlustur() {
+
+    let tahta = document.getElementById("tahta");
+    tahta.innerHTML = ""; // önce temizle
+
+    for (let satir = 0; satir < 8; satir++) {
+        for (let sutun = 0; sutun < 8; sutun++) {
+
+            let kare = document.createElement("div");
+            kare.classList.add("kare");
+
+            // Siyah-beyaz kontrolü
+            if ((satir + sutun) % 2 === 0) {
+                kare.classList.add("beyaz");
+            } else {
+                kare.classList.add("siyah");
+            }
+
+            tahta.appendChild(kare);
+        }
+    }
+}
+</script>
+
+</body>
+</html>
