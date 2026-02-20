@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<title>Rastgele Melodi</title>
+</head>
+<body>
+
+<h3 id="potre"></h3>
+
+<input type="button" onclick="melodiBaslat()" value="Melodi Başlat">
+<input type="button" onclick="melodiDurdur()" value="Melodi Durdur">
+
+<script>
+
+// 1) Notalar dizisi (7 adet)
+let notalar = ["do", "re", "mi", "fa", "sol", "la", "si"];
+
+let zamanlayici = null;
+let melodi = "";
+
+// 2) Melodiyi başlat
+function melodiBaslat() {
+
+    if (zamanlayici !== null) return; // tekrar başlatmayı engeller
+
+    zamanlayici = setInterval(function() {
+
+        // 3) 0-6 arası rastgele sayı üret
+        let rastgele = Math.floor(Math.random() * 7);
+
+        // 4) Diziden notayı al ve ekrana yaz
+        melodi += notalar[rastgele] + "_";
+
+        document.getElementById("potre").innerHTML = melodi;
+
+    }, 2000); // 2 saniye
+
+}
+
+// Melodiyi durdur
+function melodiDurdur() {
+    clearInterval(zamanlayici);
+    zamanlayici = null;
+}
+
+</script>
+
+</body>
+</html>
