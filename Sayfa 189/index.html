@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<title>Sayaç Uygulaması</title>
+
+<style>
+    .kutu {
+        width: 200px;
+        background-color: #add8e6; /* Açık mavi */
+        padding: 10px;
+        text-align: center;
+        margin: 50px auto;
+        border-radius: 8px;
+        box-shadow: 0 0 8px rgba(0,0,0,0.2);
+    }
+
+    button {
+        margin: 5px;
+        padding: 5px 10px;
+        cursor: pointer;
+    }
+
+    #sayac {
+        font-size: 40px;
+        margin: 15px 0;
+    }
+</style>
+</head>
+<body>
+
+<div class="kutu">
+
+    <button onclick="artir()">Sayıyı Artır</button>
+
+    <h1 id="sayac">15</h1>
+
+    <button onclick="azalt()">Sayıyı Azalt</button>
+
+</div>
+
+<script>
+
+let sayi = 15;
+
+function artir() {
+    sayi++;
+    document.getElementById("sayac").innerHTML = sayi;
+}
+
+function azalt() {
+    sayi--;
+    document.getElementById("sayac").innerHTML = sayi;
+}
+
+</script>
+
+</body>
+</html>
