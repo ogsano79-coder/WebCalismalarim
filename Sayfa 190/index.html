@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<title>Renkli Kutular</title>
+
+<style>
+    .kutu {
+        width: 60px;
+        height: 60px;
+        border: 1px solid black;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        margin: 5px;
+        font-weight: bold;
+    }
+</style>
+</head>
+<body>
+
+<!-- 1. Adım: 8 adet div -->
+<div id="kutu1" class="kutu">1</div>
+<div id="kutu2" class="kutu">2</div>
+<div id="kutu3" class="kutu">3</div>
+<div id="kutu4" class="kutu">4</div>
+<div id="kutu5" class="kutu">5</div>
+<div id="kutu6" class="kutu">6</div>
+<div id="kutu7" class="kutu">7</div>
+<div id="kutu8" class="kutu">8</div>
+
+<br><br>
+
+<button onclick="renkDegistir()">Renkleri Değiştir</button>
+
+<script>
+    // 2. Adım: Renk dizisi
+    const renkler = ["red", "blue", "green", "yellow", "orange", "purple", "pink", "gray"];
+
+    // 3. Adım: Rastgele renk atayan fonksiyon
+    function renkDegistir() {
+        for (let i = 1; i <= 8; i++) {
+            let rastgeleIndex = Math.floor(Math.random() * renkler.length);
+            document.getElementById("kutu" + i).style.backgroundColor = renkler[rastgeleIndex];
+        }
+    }
+</script>
+
+</body>
+</html>
