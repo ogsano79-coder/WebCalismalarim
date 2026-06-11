@@ -1,0 +1,47 @@
+﻿@page
+@model soru5.Pages.Index1Model
+@{
+    ViewData["Title"] = "En Büyük Sayıyı Bul";
+}
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card shadow">
+                <div class="card-header bg-danger text-white text-center">
+                    <h3 class="card-title mb-0">En Büyük Sayı Bulucu</h3>
+                </div>
+                <div class="card-body">
+                    <form method="post">
+                        <div class="mb-3">
+                            <label asp-for="Sayi1" class="form-label">1. Sayı:</label>
+                            <input type="number" step="any" class="form-control" asp-for="Sayi1" required />
+                            <span asp-validation-for="Sayi1" class="text-danger small"></span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="Sayi2" class="form-label">2. Sayı:</label>
+                            <input type="number" step="any" class="form-control" asp-for="Sayi2" required />
+                            <span asp-validation-for="Sayi2" class="text-danger small"></span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="Sayi3" class="form-label">3. Sayı:</label>
+                            <input type="number" step="any" class="form-control" asp-for="Sayi3" required />
+                            <span asp-validation-for="Sayi3" class="text-danger small"></span>
+                        </div>
+
+                        <button type="submit" class="btn btn-dark w-100">En Büyüğünü Bul</button>
+                    </form>
+
+                    @if (!string.IsNullOrEmpty(Model.SonucMessage))
+                    {
+                        <div class="mt-4 alert alert-info text-center fw-bold fs-5" role="alert">
+                            @Model.SonucMessage
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

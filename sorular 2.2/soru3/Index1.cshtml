@@ -1,0 +1,33 @@
+﻿@page
+@model soru3.Pages.Index1Model
+@{
+    ViewData["Title"] = "Tek mi Çift mi?";
+}
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card shadow">
+                <div class="card-header bg-primary text-white">
+                    <h3 class="card-title text-center mb-0">Tek/Çift Sayı Bulucu</h3>
+                </div>
+                <div class="card-body">
+                    <form method="post">
+                        <div class="mb-3">
+                            <label for="Sayi" class="form-label">Bir Sayı Giriniz:</label>
+                            <input type="number" class="form-control" asp-for="Sayi" required />
+                        </div>
+                        <button type="submit" class="btn btn-success w-100">Kontrol Et</button>
+                    </form>
+
+                    @if (!string.IsNullOrEmpty(Model.SonucMessage))
+                    {
+                        <div class="mt-4 alert @(Model.SonucMessage.Contains("ÇİFT") ? "alert-info" : "alert-warning") text-center fw-bold" role="alert">
+                            @Model.SonucMessage
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

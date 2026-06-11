@@ -1,0 +1,34 @@
+﻿@page
+@model soru4.Pages.Index1Model
+@{
+    ViewData["Title"] = "Reşitlik Kontrolü";
+}
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card shadow">
+                <div class="card-header bg-dark text-white text-center">
+                    <h3 class="card-title mb-0">Reşitlik Durumu Sorgulama</h3>
+                </div>
+                <div class="card-body">
+                    <form method="post">
+                        <div class="mb-3">
+                            <label for="Yas" class="form-label">Yaşınızı Giriniz:</label>
+                            <input type="number" class="form-control" asp-for="Yas" min="0" max="150" required />
+                            <span asp-validation-for="Yas" class="text-danger small"></span>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Sorgula</button>
+                    </form>
+
+                    @if (!string.IsNullOrEmpty(Model.SonucMessage))
+                    {
+                        <div class="mt-4 alert @(Model.SonucMessage == "Reşitsiniz" ? "alert-success" : "alert-danger") text-center fw-bold fs-5" role="alert">
+                            @Model.SonucMessage
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
